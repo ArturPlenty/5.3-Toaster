@@ -18,8 +18,15 @@
         $mein_toaster->load_data();
 
         $mein_toaster->toasten();
-        echo $mein_toaster->toast_zustand;
+        echo $mein_toaster->toastbrot;
 
+    }
+
+    if($_POST['zustand']) {
+
+        $mein_toaster->load_data();
+        $mein_toaster->toasten();
+        $mein_toaster->zustand();
     }
     
     if($_POST['farbe']) {

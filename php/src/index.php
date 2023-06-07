@@ -16,8 +16,9 @@
     <input type="submit" value="Farbe" name="farbe"> <br>
     <small>Anzahl Toast:</small> <input type="text" name="anzahl">
     <small>Zeit in Sekunden:</small> <input type="text" name="zeit">
-    <input type="submit" value="Hebel betätigen" name="hebel"> <br>
+    <input type="submit" value="Hebel betätigen" name="hebel">
     <input type="submit" value="Toasten" name="toasten">
+    <input type="submit" value="Zustand" name="zustand">
 
 </form>
 

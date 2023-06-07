@@ -8,6 +8,7 @@
         public $anzahl_toasts_status;
         public $toast_zeit;
         public $toast_zeit_status;
+        public $toastbrot;
         public $toast_zustand;
         public $toaster_data = [];
 
@@ -71,23 +72,29 @@
 
             if($this->toaster_data['sekunden'] == 0 | $this->toaster_data['sekunden'] < 0) {
 
-                $this->toast_zustand = "Das Toast is ungetoastet";
+                $this->toastbrot = "ungetoastet";
             }
 
             if($this->toaster_data['sekunden'] > 0 & $this->toaster_data['sekunden'] <= 5) {
 
-                $this->toast_zustand = "Das Toast ist leicht getoastet";
+                $this->toastbrot = "leicht getoastet";
             }
 
             if($this->toaster_data['sekunden'] > 5 && $this->toaster_data['sekunden'] <= 30) {
 
-                $this->toast_zustand = "Das Toast ist stark getoastet";
+                $this->toastbrot = "stark getoastet";
             }
 
             if($this->toaster_data['sekunden'] > 30) {
 
-                $this->toast_zustand = "Das Toast ist verbrannt";
+                $this->toastbrot = "verbrannt";
             }
+        }
+
+        public function zustand() {
+
+            echo 'Es befinden sich ' . $this->toaster_data['scheiben'] . ' ' . $this->toastbrot . ' Toast im Toaster, die auf '
+             . $this->toaster_data['sekunden'] . ' Sekunden einstellt sind';
         }
 
         public function farbe_abfragen() {

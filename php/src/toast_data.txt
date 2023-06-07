@@ -1,4 +1,4 @@
 {
-    "scheiben": "1",
-    "sekunden": "4"
+    "scheiben": "2",
+    "sekunden": "10"
 }
