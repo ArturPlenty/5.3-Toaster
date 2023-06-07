@@ -1,6 +1,7 @@
 <?php
 
     $mein_toaster = new Toaster();
+    $super_toaster = new Supertoaster();
 
     if($_POST['hebel']) {
 
@@ -15,10 +16,18 @@
 
     if($_POST['toasten']) {
 
-        $mein_toaster->load_data();
+        if($mein_toaster->toaster_data['sekunden'] < 40) {
 
-        $mein_toaster->toasten();
-        echo $mein_toaster->toastbrot;
+            $mein_toaster->load_data();
+            $mein_toaster->toasten();
+            echo $mein_toaster->toastbrot . '<br>';
+        }
+
+        if($mein_toaster->toaster_data['sekunden'] >= 40) {
+
+            $super_toaster->superToast();
+        }
+        
 
     }
 

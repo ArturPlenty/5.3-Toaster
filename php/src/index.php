@@ -26,6 +26,7 @@
     error_reporting(E_ALL ^ E_WARNING);
 
     include_once('toaster.php');
+    include_once('supertoaster.php');
     include_once('main.php');
 ?>
     
