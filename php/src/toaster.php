@@ -9,7 +9,7 @@
         public $toast_zeit;
         public $toast_zeit_status;
         public $toast_zustand;
-        // public $toaster_data = [];
+        public $toaster_data = [];
 
         public function __construct() {
             
@@ -17,24 +17,24 @@
             $this->toast_zeit =  $_POST['zeit'];
         }
 
-        // public function save_data() {
+        public function save_data() {
 
-        //     $this->toaster_data = [
-        //         "scheiben" => $this->anzahl_toasts,
-        //         "sekunden" => $this->toast_zeit
-        //     ];
+            $this->toaster_data = [
+                "scheiben" => $this->anzahl_toasts,
+                "sekunden" => $this->toast_zeit
+            ];
 
-        //     $encoded_data = json_encode($this->toaster_data, JSON_PRETTY_PRINT);
+            $encoded_data = json_encode($this->toaster_data, JSON_PRETTY_PRINT);
 
-        //     file_put_contents('toast_data.txt', $encoded_data);
-        // }
+            file_put_contents('toast_data.txt', $encoded_data);
+        }
 
-        // public function load_data() {
+        public function load_data() {
 
-        //     $decoded_data = file_get_contents('toast_data.txt');
+            $decoded_data = file_get_contents('toast_data.txt');
 
-        //     $this->toaster_data = json_decode($decoded_data);
-        // }
+            $this->toaster_data = json_decode($decoded_data);
+        }
 
         public function toast_reintun() {
 
