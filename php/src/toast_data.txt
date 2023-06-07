@@ -1,0 +1,4 @@
+{
+    "scheiben": "1",
+    "sekunden": "4"
+}
